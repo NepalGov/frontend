@@ -1,0 +1,35 @@
+---
+layout: base
+title: The Team
+permalink: /team/
+---
+
+<br>
+<div class="election-grid">
+  <div class="election-width-two-thirds">
+    <h1>Our Team</h1>
+    <p class="election-font-lead">We are dedicated team players who bring energy, ideas and pride to their work. Each member of our team is a specialist in his or her field. Together, we make sure you'll never leave disappointed for what you have come here. </p>
+  </div>
+</div>
+<div class="election-grid team">
+  {% assign members = site.team %} {% for member in members %}
+    <div class="election-width-one-fourth">
+      <a href="{{ member.url | prepend: site.baseurl }}">
+    {% if member.photo %}
+      <img src="{{ site.baseurl }}/img/team/{{ member.photo }}" alt="Photo of {{ member.firstname }} {{ member.lastname }}">
+    {% else %}
+      <img src="{{ site.baseurl }}/img/ng_logo.png" alt="Placeholder Nepal Government logo since {{ member.firstname }} {{ member.lastname }} does not have a photo yet">
+    {% endif %}
+  </a>
+  <div class="team member-name">
+    <a href="{{ member.url | prepend: site.baseurl }}"><strong>{{ member.firstname }} {{ member.lastname }}</strong></a>
+  </div>
+  {% if member.role %}
+  <div class="role">
+    <p>{{ member.role }}</p>
+  </div>
+  {% endif %}
+</div>
+{% endfor %}
+
+{% include extended_footer.html %}

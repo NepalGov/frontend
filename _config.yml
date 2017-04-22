@@ -19,7 +19,7 @@ description: > # this means to ignore newlines until "baseurl:"
   We are committed to providing free, comprehensive, standardized, linked
   set of election data for Nepal. Come, Join Us!
 baseurl: "/frontend" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://nepalgov.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: NepalElects
 github_username:  NepalElects
 
